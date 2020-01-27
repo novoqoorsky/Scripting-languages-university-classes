@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module molecule_parser</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>molecule_parser</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/novoqoorsky/PycharmProjects/Chemical%20Equations%20Balancer/parsing/molecule_parser.py">/home/novoqoorsky/PycharmProjects/Chemical Equations Balancer/parsing/molecule_parser.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="unittest.html">unittest</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="molecule_parser.html#MoleculeParser">MoleculeParser</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="collections.html#Counter">collections.Counter</a>(<a href="builtins.html#dict">builtins.dict</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="molecule_parser.html#OrderedCounter">OrderedCounter</a>(<a href="collections.html#Counter">collections.Counter</a>, <a href="collections.html#OrderedDict">collections.OrderedDict</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="collections.html#OrderedDict">collections.OrderedDict</a>(<a href="builtins.html#dict">builtins.dict</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="molecule_parser.html#OrderedCounter">OrderedCounter</a>(<a href="collections.html#Counter">collections.Counter</a>, <a href="collections.html#OrderedDict">collections.OrderedDict</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="unittest.case.html#TestCase">unittest.case.TestCase</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="molecule_parser.html#MoleculeParserTest">MoleculeParserTest</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MoleculeParser">class <strong>MoleculeParser</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;for&nbsp;extracting&nbsp;atoms&nbsp;and&nbsp;their&nbsp;counts&nbsp;from&nbsp;molecules.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MoleculeParser-parse_molecule_into_atoms"><strong>parse_molecule_into_atoms</strong></a>(self, molecule)</dt><dd><tt>Creates&nbsp;a&nbsp;dictionary,&nbsp;where&nbsp;atom&nbsp;symbol&nbsp;is&nbsp;a&nbsp;key&nbsp;and&nbsp;its&nbsp;count&nbsp;is&nbsp;the&nbsp;value.<br>
+:param&nbsp;molecule:&nbsp;the&nbsp;molecule<br>
+:type&nbsp;molecule:&nbsp;string<br>
+:return:&nbsp;the&nbsp;dictionary</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="MoleculeParser-validate_molecule_format"><strong>validate_molecule_format</strong></a>(molecule)</dt><dd><tt>Checks&nbsp;whether&nbsp;given&nbsp;molecule&nbsp;meets&nbsp;format&nbsp;requirements<br>
+:param&nbsp;molecule:&nbsp;the&nbsp;molecule<br>
+:type&nbsp;molecule:&nbsp;string</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MoleculeParserTest">class <strong>MoleculeParserTest</strong></a>(<a href="unittest.case.html#TestCase">unittest.case.TestCase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;for&nbsp;testing&nbsp;parser&nbsp;correctness&nbsp;on&nbsp;molecules&nbsp;of&nbsp;different&nbsp;difficulty&nbsp;level<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="molecule_parser.html#MoleculeParserTest">MoleculeParserTest</a></dd>
+<dd><a href="unittest.case.html#TestCase">unittest.case.TestCase</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MoleculeParserTest-test_hardcore_molecules_parsing"><strong>test_hardcore_molecules_parsing</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-test_more_complicated_molecules_parsing"><strong>test_more_complicated_molecules_parsing</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-test_simple_molecules_parsing"><strong>test_simple_molecules_parsing</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>molecule_parser</strong> = &lt;molecule_parser.MoleculeParser object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="unittest.case.html#TestCase">unittest.case.TestCase</a>:<br>
+<dl><dt><a name="MoleculeParserTest-__call__"><strong>__call__</strong></a>(self, *args, **kwds)</dt><dd><tt>Call&nbsp;self&nbsp;as&nbsp;a&nbsp;function.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-__init__"><strong>__init__</strong></a>(self, methodName='runTest')</dt><dd><tt>Create&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;class&nbsp;that&nbsp;will&nbsp;use&nbsp;the&nbsp;named&nbsp;test<br>
+method&nbsp;when&nbsp;executed.&nbsp;Raises&nbsp;a&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;instance&nbsp;does<br>
+not&nbsp;have&nbsp;a&nbsp;method&nbsp;with&nbsp;the&nbsp;specified&nbsp;name.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-addCleanup"><strong>addCleanup</strong></a>(self, function, *args, **kwargs)</dt><dd><tt>Add&nbsp;a&nbsp;function,&nbsp;with&nbsp;arguments,&nbsp;to&nbsp;be&nbsp;called&nbsp;when&nbsp;the&nbsp;test&nbsp;is<br>
+completed.&nbsp;Functions&nbsp;added&nbsp;are&nbsp;called&nbsp;on&nbsp;a&nbsp;LIFO&nbsp;basis&nbsp;and&nbsp;are<br>
+called&nbsp;after&nbsp;tearDown&nbsp;on&nbsp;test&nbsp;failure&nbsp;or&nbsp;success.<br>
+&nbsp;<br>
+Cleanup&nbsp;items&nbsp;are&nbsp;called&nbsp;even&nbsp;if&nbsp;setUp&nbsp;fails&nbsp;(unlike&nbsp;tearDown).</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-addTypeEqualityFunc"><strong>addTypeEqualityFunc</strong></a>(self, typeobj, function)</dt><dd><tt>Add&nbsp;a&nbsp;type&nbsp;specific&nbsp;assertEqual&nbsp;style&nbsp;function&nbsp;to&nbsp;compare&nbsp;a&nbsp;type.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;is&nbsp;for&nbsp;use&nbsp;by&nbsp;<a href="unittest.case.html#TestCase">TestCase</a>&nbsp;subclasses&nbsp;that&nbsp;need&nbsp;to&nbsp;register<br>
+their&nbsp;own&nbsp;type&nbsp;equality&nbsp;functions&nbsp;to&nbsp;provide&nbsp;nicer&nbsp;error&nbsp;messages.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;typeobj:&nbsp;The&nbsp;data&nbsp;type&nbsp;to&nbsp;call&nbsp;this&nbsp;function&nbsp;on&nbsp;when&nbsp;both&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;are&nbsp;of&nbsp;the&nbsp;same&nbsp;type&nbsp;in&nbsp;<a href="#MoleculeParserTest-assertEqual">assertEqual</a>().<br>
+&nbsp;&nbsp;&nbsp;&nbsp;function:&nbsp;The&nbsp;callable&nbsp;taking&nbsp;two&nbsp;arguments&nbsp;and&nbsp;an&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg=&nbsp;argument&nbsp;that&nbsp;raises&nbsp;self.<strong>failureException</strong>&nbsp;with&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;useful&nbsp;error&nbsp;message&nbsp;when&nbsp;the&nbsp;two&nbsp;arguments&nbsp;are&nbsp;not&nbsp;equal.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertAlmostEqual"><strong>assertAlmostEqual</strong></a>(self, first, second, places=None, msg=None, delta=None)</dt><dd><tt>Fail&nbsp;if&nbsp;the&nbsp;two&nbsp;objects&nbsp;are&nbsp;unequal&nbsp;as&nbsp;determined&nbsp;by&nbsp;their<br>
+difference&nbsp;rounded&nbsp;to&nbsp;the&nbsp;given&nbsp;number&nbsp;of&nbsp;decimal&nbsp;places<br>
+(default&nbsp;7)&nbsp;and&nbsp;comparing&nbsp;to&nbsp;zero,&nbsp;or&nbsp;by&nbsp;comparing&nbsp;that&nbsp;the<br>
+difference&nbsp;between&nbsp;the&nbsp;two&nbsp;objects&nbsp;is&nbsp;more&nbsp;than&nbsp;the&nbsp;given<br>
+delta.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;decimal&nbsp;places&nbsp;(from&nbsp;zero)&nbsp;are&nbsp;usually&nbsp;not&nbsp;the&nbsp;same<br>
+as&nbsp;significant&nbsp;digits&nbsp;(measured&nbsp;from&nbsp;the&nbsp;most&nbsp;significant&nbsp;digit).<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;two&nbsp;objects&nbsp;compare&nbsp;equal&nbsp;then&nbsp;they&nbsp;will&nbsp;automatically<br>
+compare&nbsp;almost&nbsp;equal.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertAlmostEquals"><strong>assertAlmostEquals</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertCountEqual"><strong>assertCountEqual</strong></a>(self, first, second, msg=None)</dt><dd><tt>An&nbsp;unordered&nbsp;sequence&nbsp;comparison&nbsp;asserting&nbsp;that&nbsp;the&nbsp;same&nbsp;elements,<br>
+regardless&nbsp;of&nbsp;order.&nbsp;&nbsp;If&nbsp;the&nbsp;same&nbsp;element&nbsp;occurs&nbsp;more&nbsp;than&nbsp;once,<br>
+it&nbsp;verifies&nbsp;that&nbsp;the&nbsp;elements&nbsp;occur&nbsp;the&nbsp;same&nbsp;number&nbsp;of&nbsp;times.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.<a href="#MoleculeParserTest-assertEqual">assertEqual</a>(<a href="collections.html#Counter">Counter</a>(list(first)),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="collections.html#Counter">Counter</a>(list(second)))<br>
+&nbsp;<br>
+&nbsp;Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[0,&nbsp;1,&nbsp;1]&nbsp;and&nbsp;[1,&nbsp;0,&nbsp;1]&nbsp;compare&nbsp;equal.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[0,&nbsp;0,&nbsp;1]&nbsp;and&nbsp;[0,&nbsp;1]&nbsp;compare&nbsp;unequal.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertDictContainsSubset"><strong>assertDictContainsSubset</strong></a>(self, subset, dictionary, msg=None)</dt><dd><tt>Checks&nbsp;whether&nbsp;dictionary&nbsp;is&nbsp;a&nbsp;superset&nbsp;of&nbsp;subset.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertDictEqual"><strong>assertDictEqual</strong></a>(self, d1, d2, msg=None)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertEqual"><strong>assertEqual</strong></a>(self, first, second, msg=None)</dt><dd><tt>Fail&nbsp;if&nbsp;the&nbsp;two&nbsp;objects&nbsp;are&nbsp;unequal&nbsp;as&nbsp;determined&nbsp;by&nbsp;the&nbsp;'=='<br>
+operator.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertEquals"><strong>assertEquals</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertFalse"><strong>assertFalse</strong></a>(self, expr, msg=None)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;expression&nbsp;is&nbsp;false.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertGreater"><strong>assertGreater</strong></a>(self, a, b, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;&gt;&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertGreaterEqual"><strong>assertGreaterEqual</strong></a>(self, a, b, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;&gt;=&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIn"><strong>assertIn</strong></a>(self, member, container, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;in&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIs"><strong>assertIs</strong></a>(self, expr1, expr2, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;is&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIsInstance"><strong>assertIsInstance</strong></a>(self, obj, cls, msg=None)</dt><dd><tt>Same&nbsp;as&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(isinstance(obj,&nbsp;cls)),&nbsp;with&nbsp;a&nbsp;nicer<br>
+default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIsNone"><strong>assertIsNone</strong></a>(self, obj, msg=None)</dt><dd><tt>Same&nbsp;as&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(obj&nbsp;is&nbsp;None),&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIsNot"><strong>assertIsNot</strong></a>(self, expr1, expr2, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;is&nbsp;not&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertIsNotNone"><strong>assertIsNotNone</strong></a>(self, obj, msg=None)</dt><dd><tt>Included&nbsp;for&nbsp;symmetry&nbsp;with&nbsp;assertIsNone.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertLess"><strong>assertLess</strong></a>(self, a, b, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;&lt;&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertLessEqual"><strong>assertLessEqual</strong></a>(self, a, b, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;&lt;=&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertListEqual"><strong>assertListEqual</strong></a>(self, list1, list2, msg=None)</dt><dd><tt>A&nbsp;list-specific&nbsp;equality&nbsp;assertion.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list1:&nbsp;The&nbsp;first&nbsp;list&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list2:&nbsp;The&nbsp;second&nbsp;list&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;to&nbsp;use&nbsp;on&nbsp;failure&nbsp;instead&nbsp;of&nbsp;a&nbsp;list&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;differences.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertLogs"><strong>assertLogs</strong></a>(self, logger=None, level=None)</dt><dd><tt>Fail&nbsp;unless&nbsp;a&nbsp;log&nbsp;message&nbsp;of&nbsp;level&nbsp;*level*&nbsp;or&nbsp;higher&nbsp;is&nbsp;emitted<br>
+on&nbsp;*logger_name*&nbsp;or&nbsp;its&nbsp;children.&nbsp;&nbsp;If&nbsp;omitted,&nbsp;*level*&nbsp;defaults&nbsp;to<br>
+INFO&nbsp;and&nbsp;*logger*&nbsp;defaults&nbsp;to&nbsp;the&nbsp;root&nbsp;logger.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;must&nbsp;be&nbsp;used&nbsp;as&nbsp;a&nbsp;context&nbsp;manager,&nbsp;and&nbsp;will&nbsp;yield<br>
+a&nbsp;recording&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;two&nbsp;attributes:&nbsp;`output`&nbsp;and&nbsp;`records`.<br>
+At&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;context&nbsp;manager,&nbsp;the&nbsp;`output`&nbsp;attribute&nbsp;will<br>
+be&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;matching&nbsp;formatted&nbsp;log&nbsp;messages&nbsp;and&nbsp;the<br>
+`records`&nbsp;attribute&nbsp;will&nbsp;be&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;corresponding&nbsp;LogRecord<br>
+objects.<br>
+&nbsp;<br>
+Example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;self.<a href="#MoleculeParserTest-assertLogs">assertLogs</a>('foo',&nbsp;level='INFO')&nbsp;as&nbsp;cm:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logging.getLogger('foo').info('first&nbsp;message')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logging.getLogger('foo.bar').error('second&nbsp;message')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.<a href="#MoleculeParserTest-assertEqual">assertEqual</a>(cm.output,&nbsp;['INFO:foo:first&nbsp;message',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'ERROR:foo.bar:second&nbsp;message'])</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertMultiLineEqual"><strong>assertMultiLineEqual</strong></a>(self, first, second, msg=None)</dt><dd><tt>Assert&nbsp;that&nbsp;two&nbsp;multi-line&nbsp;strings&nbsp;are&nbsp;equal.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotAlmostEqual"><strong>assertNotAlmostEqual</strong></a>(self, first, second, places=None, msg=None, delta=None)</dt><dd><tt>Fail&nbsp;if&nbsp;the&nbsp;two&nbsp;objects&nbsp;are&nbsp;equal&nbsp;as&nbsp;determined&nbsp;by&nbsp;their<br>
+difference&nbsp;rounded&nbsp;to&nbsp;the&nbsp;given&nbsp;number&nbsp;of&nbsp;decimal&nbsp;places<br>
+(default&nbsp;7)&nbsp;and&nbsp;comparing&nbsp;to&nbsp;zero,&nbsp;or&nbsp;by&nbsp;comparing&nbsp;that&nbsp;the<br>
+difference&nbsp;between&nbsp;the&nbsp;two&nbsp;objects&nbsp;is&nbsp;less&nbsp;than&nbsp;the&nbsp;given&nbsp;delta.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;decimal&nbsp;places&nbsp;(from&nbsp;zero)&nbsp;are&nbsp;usually&nbsp;not&nbsp;the&nbsp;same<br>
+as&nbsp;significant&nbsp;digits&nbsp;(measured&nbsp;from&nbsp;the&nbsp;most&nbsp;significant&nbsp;digit).<br>
+&nbsp;<br>
+Objects&nbsp;that&nbsp;are&nbsp;equal&nbsp;automatically&nbsp;fail.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotAlmostEquals"><strong>assertNotAlmostEquals</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotEqual"><strong>assertNotEqual</strong></a>(self, first, second, msg=None)</dt><dd><tt>Fail&nbsp;if&nbsp;the&nbsp;two&nbsp;objects&nbsp;are&nbsp;equal&nbsp;as&nbsp;determined&nbsp;by&nbsp;the&nbsp;'!='<br>
+operator.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotEquals"><strong>assertNotEquals</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotIn"><strong>assertNotIn</strong></a>(self, member, container, msg=None)</dt><dd><tt>Just&nbsp;like&nbsp;self.<a href="#MoleculeParserTest-assertTrue">assertTrue</a>(a&nbsp;not&nbsp;in&nbsp;b),&nbsp;but&nbsp;with&nbsp;a&nbsp;nicer&nbsp;default&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotIsInstance"><strong>assertNotIsInstance</strong></a>(self, obj, cls, msg=None)</dt><dd><tt>Included&nbsp;for&nbsp;symmetry&nbsp;with&nbsp;assertIsInstance.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotRegex"><strong>assertNotRegex</strong></a>(self, text, unexpected_regex, msg=None)</dt><dd><tt>Fail&nbsp;the&nbsp;test&nbsp;if&nbsp;the&nbsp;text&nbsp;matches&nbsp;the&nbsp;regular&nbsp;expression.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertNotRegexpMatches"><strong>assertNotRegexpMatches</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertRaises"><strong>assertRaises</strong></a>(self, expected_exception, *args, **kwargs)</dt><dd><tt>Fail&nbsp;unless&nbsp;an&nbsp;exception&nbsp;of&nbsp;class&nbsp;expected_exception&nbsp;is&nbsp;raised<br>
+by&nbsp;the&nbsp;callable&nbsp;when&nbsp;invoked&nbsp;with&nbsp;specified&nbsp;positional&nbsp;and<br>
+keyword&nbsp;arguments.&nbsp;If&nbsp;a&nbsp;different&nbsp;type&nbsp;of&nbsp;exception&nbsp;is<br>
+raised,&nbsp;it&nbsp;will&nbsp;not&nbsp;be&nbsp;caught,&nbsp;and&nbsp;the&nbsp;test&nbsp;case&nbsp;will&nbsp;be<br>
+deemed&nbsp;to&nbsp;have&nbsp;suffered&nbsp;an&nbsp;error,&nbsp;exactly&nbsp;as&nbsp;for&nbsp;an<br>
+unexpected&nbsp;exception.<br>
+&nbsp;<br>
+If&nbsp;called&nbsp;with&nbsp;the&nbsp;callable&nbsp;and&nbsp;arguments&nbsp;omitted,&nbsp;will&nbsp;return&nbsp;a<br>
+context&nbsp;<a href="builtins.html#object">object</a>&nbsp;used&nbsp;like&nbsp;this::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;self.<a href="#MoleculeParserTest-assertRaises">assertRaises</a>(SomeException):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something()<br>
+&nbsp;<br>
+An&nbsp;optional&nbsp;keyword&nbsp;argument&nbsp;'msg'&nbsp;can&nbsp;be&nbsp;provided&nbsp;when&nbsp;assertRaises<br>
+is&nbsp;used&nbsp;as&nbsp;a&nbsp;context&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+The&nbsp;context&nbsp;manager&nbsp;keeps&nbsp;a&nbsp;reference&nbsp;to&nbsp;the&nbsp;exception&nbsp;as<br>
+the&nbsp;'exception'&nbsp;attribute.&nbsp;This&nbsp;allows&nbsp;you&nbsp;to&nbsp;inspect&nbsp;the<br>
+exception&nbsp;after&nbsp;the&nbsp;assertion::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;self.<a href="#MoleculeParserTest-assertRaises">assertRaises</a>(SomeException)&nbsp;as&nbsp;cm:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the_exception&nbsp;=&nbsp;cm.exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.<a href="#MoleculeParserTest-assertEqual">assertEqual</a>(the_exception.error_code,&nbsp;3)</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertRaisesRegex"><strong>assertRaisesRegex</strong></a>(self, expected_exception, expected_regex, *args, **kwargs)</dt><dd><tt>Asserts&nbsp;that&nbsp;the&nbsp;message&nbsp;in&nbsp;a&nbsp;raised&nbsp;exception&nbsp;matches&nbsp;a&nbsp;regex.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expected_exception:&nbsp;Exception&nbsp;class&nbsp;expected&nbsp;to&nbsp;be&nbsp;raised.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expected_regex:&nbsp;Regex&nbsp;(re&nbsp;pattern&nbsp;<a href="builtins.html#object">object</a>&nbsp;or&nbsp;string)&nbsp;expected<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;found&nbsp;in&nbsp;error&nbsp;message.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;args:&nbsp;Function&nbsp;to&nbsp;be&nbsp;called&nbsp;and&nbsp;extra&nbsp;positional&nbsp;args.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kwargs:&nbsp;Extra&nbsp;kwargs.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;used&nbsp;in&nbsp;case&nbsp;of&nbsp;failure.&nbsp;Can&nbsp;only&nbsp;be&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;assertRaisesRegex&nbsp;is&nbsp;used&nbsp;as&nbsp;a&nbsp;context&nbsp;manager.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertRaisesRegexp"><strong>assertRaisesRegexp</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertRegex"><strong>assertRegex</strong></a>(self, text, expected_regex, msg=None)</dt><dd><tt>Fail&nbsp;the&nbsp;test&nbsp;unless&nbsp;the&nbsp;text&nbsp;matches&nbsp;the&nbsp;regular&nbsp;expression.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertRegexpMatches"><strong>assertRegexpMatches</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertSequenceEqual"><strong>assertSequenceEqual</strong></a>(self, seq1, seq2, msg=None, seq_type=None)</dt><dd><tt>An&nbsp;equality&nbsp;assertion&nbsp;for&nbsp;ordered&nbsp;sequences&nbsp;(like&nbsp;lists&nbsp;and&nbsp;tuples).<br>
+&nbsp;<br>
+For&nbsp;the&nbsp;purposes&nbsp;of&nbsp;this&nbsp;function,&nbsp;a&nbsp;valid&nbsp;ordered&nbsp;sequence&nbsp;type&nbsp;is&nbsp;one<br>
+which&nbsp;can&nbsp;be&nbsp;indexed,&nbsp;has&nbsp;a&nbsp;length,&nbsp;and&nbsp;has&nbsp;an&nbsp;equality&nbsp;operator.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;seq1:&nbsp;The&nbsp;first&nbsp;sequence&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;seq2:&nbsp;The&nbsp;second&nbsp;sequence&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;seq_type:&nbsp;The&nbsp;expected&nbsp;datatype&nbsp;of&nbsp;the&nbsp;sequences,&nbsp;or&nbsp;None&nbsp;if&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;datatype&nbsp;should&nbsp;be&nbsp;enforced.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;to&nbsp;use&nbsp;on&nbsp;failure&nbsp;instead&nbsp;of&nbsp;a&nbsp;list&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;differences.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertSetEqual"><strong>assertSetEqual</strong></a>(self, set1, set2, msg=None)</dt><dd><tt>A&nbsp;set-specific&nbsp;equality&nbsp;assertion.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;set1:&nbsp;The&nbsp;first&nbsp;set&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;set2:&nbsp;The&nbsp;second&nbsp;set&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;to&nbsp;use&nbsp;on&nbsp;failure&nbsp;instead&nbsp;of&nbsp;a&nbsp;list&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;differences.<br>
+&nbsp;<br>
+assertSetEqual&nbsp;uses&nbsp;ducktyping&nbsp;to&nbsp;support&nbsp;different&nbsp;types&nbsp;of&nbsp;sets,&nbsp;and<br>
+is&nbsp;optimized&nbsp;for&nbsp;sets&nbsp;specifically&nbsp;(parameters&nbsp;must&nbsp;support&nbsp;a<br>
+difference&nbsp;method).</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertTrue"><strong>assertTrue</strong></a>(self, expr, msg=None)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;expression&nbsp;is&nbsp;true.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertTupleEqual"><strong>assertTupleEqual</strong></a>(self, tuple1, tuple2, msg=None)</dt><dd><tt>A&nbsp;tuple-specific&nbsp;equality&nbsp;assertion.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple1:&nbsp;The&nbsp;first&nbsp;tuple&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple2:&nbsp;The&nbsp;second&nbsp;tuple&nbsp;to&nbsp;compare.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;to&nbsp;use&nbsp;on&nbsp;failure&nbsp;instead&nbsp;of&nbsp;a&nbsp;list&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;differences.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertWarns"><strong>assertWarns</strong></a>(self, expected_warning, *args, **kwargs)</dt><dd><tt>Fail&nbsp;unless&nbsp;a&nbsp;warning&nbsp;of&nbsp;class&nbsp;warnClass&nbsp;is&nbsp;triggered<br>
+by&nbsp;the&nbsp;callable&nbsp;when&nbsp;invoked&nbsp;with&nbsp;specified&nbsp;positional&nbsp;and<br>
+keyword&nbsp;arguments.&nbsp;&nbsp;If&nbsp;a&nbsp;different&nbsp;type&nbsp;of&nbsp;warning&nbsp;is<br>
+triggered,&nbsp;it&nbsp;will&nbsp;not&nbsp;be&nbsp;handled:&nbsp;depending&nbsp;on&nbsp;the&nbsp;other<br>
+warning&nbsp;filtering&nbsp;rules&nbsp;in&nbsp;effect,&nbsp;it&nbsp;might&nbsp;be&nbsp;silenced,&nbsp;printed<br>
+out,&nbsp;or&nbsp;raised&nbsp;as&nbsp;an&nbsp;exception.<br>
+&nbsp;<br>
+If&nbsp;called&nbsp;with&nbsp;the&nbsp;callable&nbsp;and&nbsp;arguments&nbsp;omitted,&nbsp;will&nbsp;return&nbsp;a<br>
+context&nbsp;<a href="builtins.html#object">object</a>&nbsp;used&nbsp;like&nbsp;this::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;self.<a href="#MoleculeParserTest-assertWarns">assertWarns</a>(SomeWarning):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something()<br>
+&nbsp;<br>
+An&nbsp;optional&nbsp;keyword&nbsp;argument&nbsp;'msg'&nbsp;can&nbsp;be&nbsp;provided&nbsp;when&nbsp;assertWarns<br>
+is&nbsp;used&nbsp;as&nbsp;a&nbsp;context&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+The&nbsp;context&nbsp;manager&nbsp;keeps&nbsp;a&nbsp;reference&nbsp;to&nbsp;the&nbsp;first&nbsp;matching<br>
+warning&nbsp;as&nbsp;the&nbsp;'warning'&nbsp;attribute;&nbsp;similarly,&nbsp;the&nbsp;'filename'<br>
+and&nbsp;'lineno'&nbsp;attributes&nbsp;give&nbsp;you&nbsp;information&nbsp;about&nbsp;the&nbsp;line<br>
+of&nbsp;Python&nbsp;code&nbsp;from&nbsp;which&nbsp;the&nbsp;warning&nbsp;was&nbsp;triggered.<br>
+This&nbsp;allows&nbsp;you&nbsp;to&nbsp;inspect&nbsp;the&nbsp;warning&nbsp;after&nbsp;the&nbsp;assertion::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;self.<a href="#MoleculeParserTest-assertWarns">assertWarns</a>(SomeWarning)&nbsp;as&nbsp;cm:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the_warning&nbsp;=&nbsp;cm.warning<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.<a href="#MoleculeParserTest-assertEqual">assertEqual</a>(the_warning.some_attribute,&nbsp;147)</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assertWarnsRegex"><strong>assertWarnsRegex</strong></a>(self, expected_warning, expected_regex, *args, **kwargs)</dt><dd><tt>Asserts&nbsp;that&nbsp;the&nbsp;message&nbsp;in&nbsp;a&nbsp;triggered&nbsp;warning&nbsp;matches&nbsp;a&nbsp;regexp.<br>
+Basic&nbsp;functioning&nbsp;is&nbsp;similar&nbsp;to&nbsp;<a href="#MoleculeParserTest-assertWarns">assertWarns</a>()&nbsp;with&nbsp;the&nbsp;addition<br>
+that&nbsp;only&nbsp;warnings&nbsp;whose&nbsp;messages&nbsp;also&nbsp;match&nbsp;the&nbsp;regular&nbsp;expression<br>
+are&nbsp;considered&nbsp;successful&nbsp;matches.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expected_warning:&nbsp;Warning&nbsp;class&nbsp;expected&nbsp;to&nbsp;be&nbsp;triggered.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expected_regex:&nbsp;Regex&nbsp;(re&nbsp;pattern&nbsp;<a href="builtins.html#object">object</a>&nbsp;or&nbsp;string)&nbsp;expected<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;found&nbsp;in&nbsp;error&nbsp;message.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;args:&nbsp;Function&nbsp;to&nbsp;be&nbsp;called&nbsp;and&nbsp;extra&nbsp;positional&nbsp;args.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kwargs:&nbsp;Extra&nbsp;kwargs.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;msg:&nbsp;Optional&nbsp;message&nbsp;used&nbsp;in&nbsp;case&nbsp;of&nbsp;failure.&nbsp;Can&nbsp;only&nbsp;be&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;assertWarnsRegex&nbsp;is&nbsp;used&nbsp;as&nbsp;a&nbsp;context&nbsp;manager.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-assert_"><strong>assert_</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-countTestCases"><strong>countTestCases</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-debug"><strong>debug</strong></a>(self)</dt><dd><tt>Run&nbsp;the&nbsp;test&nbsp;without&nbsp;collecting&nbsp;errors&nbsp;in&nbsp;a&nbsp;TestResult</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-defaultTestResult"><strong>defaultTestResult</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-doCleanups"><strong>doCleanups</strong></a>(self)</dt><dd><tt>Execute&nbsp;all&nbsp;cleanup&nbsp;functions.&nbsp;Normally&nbsp;called&nbsp;for&nbsp;you&nbsp;after<br>
+tearDown.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-fail"><strong>fail</strong></a>(self, msg=None)</dt><dd><tt>Fail&nbsp;immediately,&nbsp;with&nbsp;the&nbsp;given&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-failIf"><strong>failIf</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failIfAlmostEqual"><strong>failIfAlmostEqual</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failIfEqual"><strong>failIfEqual</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failUnless"><strong>failUnless</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failUnlessAlmostEqual"><strong>failUnlessAlmostEqual</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failUnlessEqual"><strong>failUnlessEqual</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-failUnlessRaises"><strong>failUnlessRaises</strong></a> = deprecated_func(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-id"><strong>id</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-run"><strong>run</strong></a>(self, result=None)</dt></dl>
+
+<dl><dt><a name="MoleculeParserTest-setUp"><strong>setUp</strong></a>(self)</dt><dd><tt>Hook&nbsp;method&nbsp;for&nbsp;setting&nbsp;up&nbsp;the&nbsp;test&nbsp;fixture&nbsp;before&nbsp;exercising&nbsp;it.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-shortDescription"><strong>shortDescription</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;one-line&nbsp;description&nbsp;of&nbsp;the&nbsp;test,&nbsp;or&nbsp;None&nbsp;if&nbsp;no<br>
+description&nbsp;has&nbsp;been&nbsp;provided.<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;returns&nbsp;the&nbsp;first&nbsp;line&nbsp;of<br>
+the&nbsp;specified&nbsp;test&nbsp;method's&nbsp;docstring.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-skipTest"><strong>skipTest</strong></a>(self, reason)</dt><dd><tt>Skip&nbsp;this&nbsp;test.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-subTest"><strong>subTest</strong></a>(self, msg=&lt;object object at 0x7f6f22d8c1b0&gt;, **params)</dt><dd><tt>Return&nbsp;a&nbsp;context&nbsp;manager&nbsp;that&nbsp;will&nbsp;return&nbsp;the&nbsp;enclosed&nbsp;block<br>
+of&nbsp;code&nbsp;in&nbsp;a&nbsp;subtest&nbsp;identified&nbsp;by&nbsp;the&nbsp;optional&nbsp;message&nbsp;and<br>
+keyword&nbsp;parameters.&nbsp;&nbsp;A&nbsp;failure&nbsp;in&nbsp;the&nbsp;subtest&nbsp;marks&nbsp;the&nbsp;test<br>
+case&nbsp;as&nbsp;failed&nbsp;but&nbsp;resumes&nbsp;execution&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;enclosed<br>
+block,&nbsp;allowing&nbsp;further&nbsp;test&nbsp;code&nbsp;to&nbsp;be&nbsp;executed.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-tearDown"><strong>tearDown</strong></a>(self)</dt><dd><tt>Hook&nbsp;method&nbsp;for&nbsp;deconstructing&nbsp;the&nbsp;test&nbsp;fixture&nbsp;after&nbsp;testing&nbsp;it.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="unittest.case.html#TestCase">unittest.case.TestCase</a>:<br>
+<dl><dt><a name="MoleculeParserTest-setUpClass"><strong>setUpClass</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Hook&nbsp;method&nbsp;for&nbsp;setting&nbsp;up&nbsp;class&nbsp;fixture&nbsp;before&nbsp;running&nbsp;tests&nbsp;in&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<dl><dt><a name="MoleculeParserTest-tearDownClass"><strong>tearDownClass</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Hook&nbsp;method&nbsp;for&nbsp;deconstructing&nbsp;the&nbsp;class&nbsp;fixture&nbsp;after&nbsp;running&nbsp;all&nbsp;tests&nbsp;in&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="unittest.case.html#TestCase">unittest.case.TestCase</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="unittest.case.html#TestCase">unittest.case.TestCase</a>:<br>
+<dl><dt><strong>failureException</strong> = &lt;class 'AssertionError'&gt;<dd><tt>Assertion&nbsp;failed.</tt></dl>
+
+<dl><dt><strong>longMessage</strong> = True</dl>
+
+<dl><dt><strong>maxDiff</strong> = 640</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OrderedCounter">class <strong>OrderedCounter</strong></a>(<a href="collections.html#Counter">collections.Counter</a>, <a href="collections.html#OrderedDict">collections.OrderedDict</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;trick&nbsp;for&nbsp;creating&nbsp;<a href="collections.html#Counter">Counter</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;keeps&nbsp;order&nbsp;of&nbsp;insertion.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="molecule_parser.html#OrderedCounter">OrderedCounter</a></dd>
+<dd><a href="collections.html#Counter">collections.Counter</a></dd>
+<dd><a href="collections.html#OrderedDict">collections.OrderedDict</a></dd>
+<dd><a href="builtins.html#dict">builtins.dict</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods inherited from <a href="collections.html#Counter">collections.Counter</a>:<br>
+<dl><dt><a name="OrderedCounter-__add__"><strong>__add__</strong></a>(self, other)</dt><dd><tt>Add&nbsp;counts&nbsp;from&nbsp;two&nbsp;counters.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')&nbsp;+&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;4,&nbsp;'c':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__and__"><strong>__and__</strong></a>(self, other)</dt><dd><tt>Intersection&nbsp;is&nbsp;the&nbsp;minimum&nbsp;of&nbsp;corresponding&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')&nbsp;&amp;&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__delitem__"><strong>__delitem__</strong></a>(self, elem)</dt><dd><tt>Like&nbsp;dict.<a href="#OrderedCounter-__delitem__">__delitem__</a>()&nbsp;but&nbsp;does&nbsp;not&nbsp;raise&nbsp;KeyError&nbsp;for&nbsp;missing&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__iadd__"><strong>__iadd__</strong></a>(self, other)</dt><dd><tt>Inplace&nbsp;add&nbsp;from&nbsp;another&nbsp;counter,&nbsp;keeping&nbsp;only&nbsp;positive&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;+=&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+&gt;&gt;&gt;&nbsp;c<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;4,&nbsp;'c':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__iand__"><strong>__iand__</strong></a>(self, other)</dt><dd><tt>Inplace&nbsp;intersection&nbsp;is&nbsp;the&nbsp;minimum&nbsp;of&nbsp;corresponding&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;&amp;=&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+&gt;&gt;&gt;&nbsp;c<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__init__"><strong>__init__</strong></a>(*args, **kwds)</dt><dd><tt>Create&nbsp;a&nbsp;new,&nbsp;empty&nbsp;<a href="collections.html#Counter">Counter</a>&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;And&nbsp;if&nbsp;given,&nbsp;count&nbsp;elements<br>
+from&nbsp;an&nbsp;input&nbsp;iterable.&nbsp;&nbsp;Or,&nbsp;initialize&nbsp;the&nbsp;count&nbsp;from&nbsp;another&nbsp;mapping<br>
+of&nbsp;elements&nbsp;to&nbsp;their&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;a&nbsp;new,&nbsp;empty&nbsp;counter<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('gallahad')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;a&nbsp;new&nbsp;counter&nbsp;from&nbsp;an&nbsp;iterable<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>({'a':&nbsp;4,&nbsp;'b':&nbsp;2})&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;a&nbsp;new&nbsp;counter&nbsp;from&nbsp;a&nbsp;mapping<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>(a=4,&nbsp;b=2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;a&nbsp;new&nbsp;counter&nbsp;from&nbsp;keyword&nbsp;args</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__ior__"><strong>__ior__</strong></a>(self, other)</dt><dd><tt>Inplace&nbsp;union&nbsp;is&nbsp;the&nbsp;maximum&nbsp;of&nbsp;value&nbsp;from&nbsp;either&nbsp;counter.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;|=&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+&gt;&gt;&gt;&nbsp;c<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;3,&nbsp;'c':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__isub__"><strong>__isub__</strong></a>(self, other)</dt><dd><tt>Inplace&nbsp;subtract&nbsp;counter,&nbsp;but&nbsp;keep&nbsp;only&nbsp;results&nbsp;with&nbsp;positive&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('abbbc')<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;-=&nbsp;<a href="collections.html#Counter">Counter</a>('bccd')<br>
+&gt;&gt;&gt;&nbsp;c<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__missing__"><strong>__missing__</strong></a>(self, key)</dt><dd><tt>The&nbsp;count&nbsp;of&nbsp;elements&nbsp;not&nbsp;in&nbsp;the&nbsp;<a href="collections.html#Counter">Counter</a>&nbsp;is&nbsp;zero.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__neg__"><strong>__neg__</strong></a>(self)</dt><dd><tt>Subtracts&nbsp;from&nbsp;an&nbsp;empty&nbsp;counter.&nbsp;&nbsp;Strips&nbsp;positive&nbsp;and&nbsp;zero&nbsp;counts,<br>
+and&nbsp;flips&nbsp;the&nbsp;sign&nbsp;on&nbsp;negative&nbsp;counts.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__or__"><strong>__or__</strong></a>(self, other)</dt><dd><tt>Union&nbsp;is&nbsp;the&nbsp;maximum&nbsp;of&nbsp;value&nbsp;in&nbsp;either&nbsp;of&nbsp;the&nbsp;input&nbsp;counters.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="collections.html#Counter">Counter</a>('abbb')&nbsp;|&nbsp;<a href="collections.html#Counter">Counter</a>('bcc')<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;3,&nbsp;'c':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__pos__"><strong>__pos__</strong></a>(self)</dt><dd><tt>Adds&nbsp;an&nbsp;empty&nbsp;counter,&nbsp;effectively&nbsp;stripping&nbsp;negative&nbsp;and&nbsp;zero&nbsp;counts</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__sub__"><strong>__sub__</strong></a>(self, other)</dt><dd><tt>Subtract&nbsp;count,&nbsp;but&nbsp;keep&nbsp;only&nbsp;results&nbsp;with&nbsp;positive&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="collections.html#Counter">Counter</a>('abbbc')&nbsp;-&nbsp;<a href="collections.html#Counter">Counter</a>('bccd')<br>
+<a href="collections.html#Counter">Counter</a>({'b':&nbsp;2,&nbsp;'a':&nbsp;1})</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-copy"><strong>copy</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-elements"><strong>elements</strong></a>(self)</dt><dd><tt>Iterator&nbsp;over&nbsp;elements&nbsp;repeating&nbsp;each&nbsp;as&nbsp;many&nbsp;times&nbsp;as&nbsp;its&nbsp;count.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('ABCABC')<br>
+&gt;&gt;&gt;&nbsp;sorted(c.<a href="#OrderedCounter-elements">elements</a>())<br>
+['A',&nbsp;'A',&nbsp;'B',&nbsp;'B',&nbsp;'C',&nbsp;'C']<br>
+&nbsp;<br>
+#&nbsp;Knuth's&nbsp;example&nbsp;for&nbsp;prime&nbsp;factors&nbsp;of&nbsp;1836:&nbsp;&nbsp;2**2&nbsp;*&nbsp;3**3&nbsp;*&nbsp;17**1<br>
+&gt;&gt;&gt;&nbsp;prime_factors&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>({2:&nbsp;2,&nbsp;3:&nbsp;3,&nbsp;17:&nbsp;1})<br>
+&gt;&gt;&gt;&nbsp;product&nbsp;=&nbsp;1<br>
+&gt;&gt;&gt;&nbsp;for&nbsp;factor&nbsp;in&nbsp;prime_factors.<a href="#OrderedCounter-elements">elements</a>():&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;loop&nbsp;over&nbsp;factors<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product&nbsp;*=&nbsp;factor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;and&nbsp;multiply&nbsp;them<br>
+&gt;&gt;&gt;&nbsp;product<br>
+1836<br>
+&nbsp;<br>
+Note,&nbsp;if&nbsp;an&nbsp;element's&nbsp;count&nbsp;has&nbsp;been&nbsp;set&nbsp;to&nbsp;zero&nbsp;or&nbsp;is&nbsp;a&nbsp;negative<br>
+number,&nbsp;<a href="#OrderedCounter-elements">elements</a>()&nbsp;will&nbsp;ignore&nbsp;it.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-most_common"><strong>most_common</strong></a>(self, n=None)</dt><dd><tt>List&nbsp;the&nbsp;n&nbsp;most&nbsp;common&nbsp;elements&nbsp;and&nbsp;their&nbsp;counts&nbsp;from&nbsp;the&nbsp;most<br>
+common&nbsp;to&nbsp;the&nbsp;least.&nbsp;&nbsp;If&nbsp;n&nbsp;is&nbsp;None,&nbsp;then&nbsp;list&nbsp;all&nbsp;element&nbsp;counts.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="collections.html#Counter">Counter</a>('abcdeabcdabcaba').<a href="#OrderedCounter-most_common">most_common</a>(3)<br>
+[('a',&nbsp;5),&nbsp;('b',&nbsp;4),&nbsp;('c',&nbsp;3)]</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-subtract"><strong>subtract</strong></a>(*args, **kwds)</dt><dd><tt>Like&nbsp;dict.<a href="#OrderedCounter-update">update</a>()&nbsp;but&nbsp;subtracts&nbsp;counts&nbsp;instead&nbsp;of&nbsp;replacing&nbsp;them.<br>
+Counts&nbsp;can&nbsp;be&nbsp;reduced&nbsp;below&nbsp;zero.&nbsp;&nbsp;Both&nbsp;the&nbsp;inputs&nbsp;and&nbsp;outputs&nbsp;are<br>
+allowed&nbsp;to&nbsp;contain&nbsp;zero&nbsp;and&nbsp;negative&nbsp;counts.<br>
+&nbsp;<br>
+Source&nbsp;can&nbsp;be&nbsp;an&nbsp;iterable,&nbsp;a&nbsp;dictionary,&nbsp;or&nbsp;another&nbsp;<a href="collections.html#Counter">Counter</a>&nbsp;instance.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('which')<br>
+&gt;&gt;&gt;&nbsp;c.<a href="#OrderedCounter-subtract">subtract</a>('witch')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;subtract&nbsp;elements&nbsp;from&nbsp;another&nbsp;iterable<br>
+&gt;&gt;&gt;&nbsp;c.<a href="#OrderedCounter-subtract">subtract</a>(<a href="collections.html#Counter">Counter</a>('watch'))&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;subtract&nbsp;elements&nbsp;from&nbsp;another&nbsp;counter<br>
+&gt;&gt;&gt;&nbsp;c['h']&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;2&nbsp;in&nbsp;which,&nbsp;minus&nbsp;1&nbsp;in&nbsp;witch,&nbsp;minus&nbsp;1&nbsp;in&nbsp;watch<br>
+0<br>
+&gt;&gt;&gt;&nbsp;c['w']&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;1&nbsp;in&nbsp;which,&nbsp;minus&nbsp;1&nbsp;in&nbsp;witch,&nbsp;minus&nbsp;1&nbsp;in&nbsp;watch<br>
+-1</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-update"><strong>update</strong></a>(*args, **kwds)</dt><dd><tt>Like&nbsp;dict.<a href="#OrderedCounter-update">update</a>()&nbsp;but&nbsp;add&nbsp;counts&nbsp;instead&nbsp;of&nbsp;replacing&nbsp;them.<br>
+&nbsp;<br>
+Source&nbsp;can&nbsp;be&nbsp;an&nbsp;iterable,&nbsp;a&nbsp;dictionary,&nbsp;or&nbsp;another&nbsp;<a href="collections.html#Counter">Counter</a>&nbsp;instance.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;c&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('which')<br>
+&gt;&gt;&gt;&nbsp;c.<a href="#OrderedCounter-update">update</a>('witch')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;add&nbsp;elements&nbsp;from&nbsp;another&nbsp;iterable<br>
+&gt;&gt;&gt;&nbsp;d&nbsp;=&nbsp;<a href="collections.html#Counter">Counter</a>('watch')<br>
+&gt;&gt;&gt;&nbsp;c.<a href="#OrderedCounter-update">update</a>(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;add&nbsp;elements&nbsp;from&nbsp;another&nbsp;counter<br>
+&gt;&gt;&gt;&nbsp;c['h']&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;four&nbsp;'h'&nbsp;in&nbsp;which,&nbsp;witch,&nbsp;and&nbsp;watch<br>
+4</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="collections.html#Counter">collections.Counter</a>:<br>
+<dl><dt><a name="OrderedCounter-fromkeys"><strong>fromkeys</strong></a>(iterable, v=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>OD.<a href="#OrderedCounter-fromkeys">fromkeys</a>(S[,&nbsp;v])&nbsp;-&gt;&nbsp;New&nbsp;ordered&nbsp;dictionary&nbsp;with&nbsp;keys&nbsp;from&nbsp;S.<br>
+If&nbsp;not&nbsp;specified,&nbsp;the&nbsp;value&nbsp;defaults&nbsp;to&nbsp;None.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="collections.html#Counter">collections.Counter</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="collections.html#OrderedDict">collections.OrderedDict</a>:<br>
+<dl><dt><a name="OrderedCounter-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><tt>Implement&nbsp;iter(self).</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>od.<a href="#OrderedCounter-__reversed__">__reversed__</a>()&nbsp;&lt;==&gt;&nbsp;reversed(od)</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__setitem__"><strong>__setitem__</strong></a>(self, key, value, /)</dt><dd><tt>Set&nbsp;self[key]&nbsp;to&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedCounter-__sizeof__">__sizeof__</a>()&nbsp;-&gt;&nbsp;size&nbsp;of&nbsp;D&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-clear"><strong>clear</strong></a>(...)</dt><dd><tt>od.<a href="#OrderedCounter-clear">clear</a>()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;od.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-items"><strong>items</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedCounter-items">items</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;items</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-keys"><strong>keys</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedCounter-keys">keys</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;keys</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-move_to_end"><strong>move_to_end</strong></a>(...)</dt><dd><tt>Move&nbsp;an&nbsp;existing&nbsp;element&nbsp;to&nbsp;the&nbsp;end&nbsp;(or&nbsp;beginning&nbsp;if&nbsp;last==False).<br>
+&nbsp;<br>
+Raises&nbsp;KeyError&nbsp;if&nbsp;the&nbsp;element&nbsp;does&nbsp;not&nbsp;exist.<br>
+When&nbsp;last=True,&nbsp;acts&nbsp;like&nbsp;a&nbsp;fast&nbsp;version&nbsp;of&nbsp;self[key]=self.<a href="#OrderedCounter-pop">pop</a>(key).</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-pop"><strong>pop</strong></a>(...)</dt><dd><tt>od.<a href="#OrderedCounter-pop">pop</a>(k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;remove&nbsp;specified&nbsp;key&nbsp;and&nbsp;return&nbsp;the&nbsp;corresponding<br>
+value.&nbsp;&nbsp;If&nbsp;key&nbsp;is&nbsp;not&nbsp;found,&nbsp;d&nbsp;is&nbsp;returned&nbsp;if&nbsp;given,&nbsp;otherwise&nbsp;KeyError<br>
+is&nbsp;raised.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-popitem"><strong>popitem</strong></a>(self, /, last=True)</dt><dd><tt>Remove&nbsp;and&nbsp;return&nbsp;a&nbsp;(key,&nbsp;value)&nbsp;pair&nbsp;from&nbsp;the&nbsp;dictionary.<br>
+&nbsp;<br>
+Pairs&nbsp;are&nbsp;returned&nbsp;in&nbsp;LIFO&nbsp;order&nbsp;if&nbsp;last&nbsp;is&nbsp;true&nbsp;or&nbsp;FIFO&nbsp;order&nbsp;if&nbsp;false.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-setdefault"><strong>setdefault</strong></a>(...)</dt><dd><tt>od.<a href="#OrderedCounter-setdefault">setdefault</a>(k[,d])&nbsp;-&gt;&nbsp;od.<a href="#OrderedCounter-get">get</a>(k,d),&nbsp;also&nbsp;set&nbsp;od[k]=d&nbsp;if&nbsp;k&nbsp;not&nbsp;in&nbsp;od</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-values"><strong>values</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedCounter-values">values</a>()&nbsp;-&gt;&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;values</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="collections.html#OrderedDict">collections.OrderedDict</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#dict">builtins.dict</a>:<br>
+<dl><dt><a name="OrderedCounter-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><tt>True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False.</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedCounter-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;len(self).</tt></dd></dl>
+
+<dl><dt><a name="OrderedCounter-get"><strong>get</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedCounter-get">get</a>(k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;else&nbsp;d.&nbsp;&nbsp;d&nbsp;defaults&nbsp;to&nbsp;None.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

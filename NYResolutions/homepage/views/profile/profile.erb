@@ -1,0 +1,34 @@
+<html>
+<head>
+  <style>
+    .gap-20 {
+      width: 100%;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="gap-20"></div>
+<% if env['warden'].user.profile_id.nil? %>
+  <p>Looks like you haven't added any resolutions yet - <a href="/profile/create">create a profile now!</a></p>
+<% else %>
+  <% profile = Profile.get(env['warden'].user.profile_id) %>
+  <% profile.resolutions.each do |resolution| %>
+    <h3>
+      <%= resolution.title %> for <%= resolution.activity_duration %> minutes <%= resolution.weekly_frequency %> times a week.
+    </h3>
+  <% end %>
+  <div class="gap-20"></div>
+  Your progress so far:
+  <p><a href="/profile/<%= profile.id %>/progress/1">Week 1: <%= profile.created_on %> - <%= profile.created_on + 6 %></a></p>
+  <% $week = 1 %>
+  <% while $week < 4 do %>
+    <% if Date.today >= profile.created_on + $week * 7 %>
+      <p><a href="/profile/<%= profile.id %>/progress/<%= $week + 1%>">Week <%= $week + 1 %>: <%= profile.created_on + $week * 7 %> - <%= profile.created_on + $week * 7 + 6 %></a></p>
+    <% end %>
+    <% $week += 1 %>
+  <% end %>
+<% end %>
+
+</body>
+</html>

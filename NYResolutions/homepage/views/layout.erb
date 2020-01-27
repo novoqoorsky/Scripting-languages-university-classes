@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Year's Resolutions</title>
+
+  <style>
+    body {
+      margin: 10px auto;
+      width: 800px;
+    }
+
+    tab {
+      display: inline-block;
+      margin-left: 200px;
+    }
+  </style>
+</head>
+<body>
+<h1>New Year's Resolutions</h1>
+
+<p><a href="/">Home Page</a> <tab><a href="/profile">My Profile</a> | <a href="/auth/logout">Log Out</a></tab></p>
+
+<% if flash[:success] %>
+  <div style="color:green;">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+
+<% if flash[:error] %>
+  <div style="color:red;">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
+<% if flash[:warning] %>
+  <div style="color:orange;">
+    <%= flash[:warning] %>
+  </div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

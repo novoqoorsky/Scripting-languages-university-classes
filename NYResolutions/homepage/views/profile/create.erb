@@ -1,0 +1,33 @@
+<html>
+<head>
+  <style>
+    .gap-5 {
+      width: 100%;
+      height: 5px;
+    }
+    .gap-20 {
+      width: 100%;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="gap-20"></div>
+<p>Here you can tell me what your new year's resolutions are.</p>
+<p>Remember that once resoluted, always resoluted ;)</p>
+<div class="gap-20"></div>
+
+<% Profile.get(env['warden'].user.profile_id).resolutions.each do |resolution| %>
+  <h4>
+    <%= resolution.title %> for <%= resolution.activity_duration %> minutes <%= resolution.weekly_frequency %> times a week.
+  </h4>
+<% end %>
+
+<p><a href="/resolutions/add">Create a new resolution</a></p>
+
+<div class="gap-5"></div>
+<form action="/profile/create/finish" method="get">
+  <p><input type="submit" value="Finish profile creation"/></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+H2 + O2 -> H2O;True
+CO + CO2 + H2 -> CH4 + H2O;False
+CO2 + H2O -> C6H12O6 + O2;True
+AgI + Na2S -> Ag2S + NaI;True
+Ba3N2 + H2O -> Ba(OH)2 + NH3;True
+CaCl2 + Na3PO4 -> Ca3(PO4)2 + NaCl;True
+FeS + O2 -> Fe2O3 + SO2;True
+PCl5 + H2O -> H3PO4 + HCl;True
+As + NaOH -> Na3AsO3 + H2;True
+Hg(OH)2 + H3PO4 -> Hg3(PO4)2 + H2O;True
+HClO4 + P4O10 -> H3PO4 + Cl2O7;True
+CO + H2 -> C8H18 + H2O;True
+KClO3 + P4 -> P4O10 + KCl;True
+SnO2 + H2 -> Sn + H2O;True
+KOH + H3PO4 -> K3PO4 + H2O;True
+KNO3 + H2CO3 -> K2CO3 + HNO3;True
+Na3PO4 + HCl -> NaCl + H3PO4;True
+TiCl4 + H2O -> TiO2 + HCl;True
+C2H6O + O2 -> CO2 + H2O;True
+Fe + HC2H3O2 -> Fe(C2H3O2)3 + H2;True
+NH3 + O2 -> NO + H2O;True
+B2Br6 + HNO3 -> B(NO3)3 + HBr;True
+NH4NO3 -> N2 + O2 + H2O;True
+N2 + H2 -> NH3;True
+CaCO3 -> CaO + CO2;True
+Sc2O3 + SO3 -> Sc2(SO4)3;True
+(NH4)2Cr2O7 -> Cr2O3 + N2 + H2O;True
+Cu + HNO3 -> Cu(NO3)2 + H2O + NO;True
+Cu + HNO3 -> Cu(NO3)2 + H2O + NO2;True
+Al + Mn3O4 -> Al2O3 + Mn;True
+KHC8H4O4 + KOH -> K2C8H4O4 + H2O;True
+K4Fe(CN)6 + KMnO4 + H2SO4 -> KHSO4 + Fe2(SO4)3 + MnSO4 + HNO3 + CO2 + H2O;True

@@ -1,0 +1,25 @@
+<html>
+<head>
+  <style>
+    .gap-20 {
+      width: 100%;
+      height: 20px;
+    }
+    tab {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="gap-20"></div>
+<form action="/resolutions/add" method="post">
+  <p><label>What's the resolution?</label> <tab><input type="text" name="title" required/></tab> </p>
+  <p><label>How many times a week do you want to do that?</label> <tab><input type="number" name="weekly_frequency" required/></tab></p>
+  <p><label>For how long do you want to do it in each session? (in minutes)</label> <tab><input type="number" name="activity_duration" required/></tab></p>
+  <p><input type="submit" value="Add the resolution"/></p>
+</form>
+</body>
+</html>
+

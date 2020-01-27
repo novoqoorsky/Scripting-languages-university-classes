@@ -1,0 +1,46 @@
+<html>
+<head>
+  <style>
+    .gap-20 {
+      width: 100%;
+      height: 20px;
+    }
+    .trigger + label + div {
+      display:none;
+    }
+
+    .trigger:checked + label + div {
+      display:block;
+    }
+  </style>
+</head>
+<body>
+<div class="gap-20"></div>
+
+<% profile = Profile.get(env['warden'].user.profile_id) %>
+<p>Looks like the last time we talked was on: <%= profile.last_resolutions_update %></p>
+<p>Why don't you tell me what you've been doing since then?</p>
+<div class="gap-20"></div>
+
+
+<% profile.resolutions.each do |resolution| %>
+  <input class="trigger" id="1" type="checkbox">
+  <label for="1"><%= resolution.title %> </label>
+  <div>
+    <form action="/resolutions/<%= resolution.id %>/completion" method="post">
+      <p></p>
+      <label>Date: </label> <input type="date" id="completed_on" name="completed_on" value=<%= Date.today %> min=<%= profile.created_on %>  max=<%= Date.today %> >
+      <p><label>How long was it? (in minutes, don't lie ;))</label> <input type="number" name="activity_duration" min = "0" required/></p>
+      <p><input type="submit" value="Submit"/></p>
+    </form>
+  </div>
+
+  <br><br>
+<% end %>
+
+<a href="/resolutions/update/finish">
+  <input type="button" value="Finish" />
+</a>
+
+</body>
+</html>
